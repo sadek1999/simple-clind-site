@@ -1,6 +1,10 @@
 
 import { useLoaderData } from 'react-router-dom';
 
+const handlremove=()=>{
+
+}
+
 const Users = () => {
     const data= useLoaderData()
     return (
@@ -9,7 +13,7 @@ const Users = () => {
             <h1>{data.length}</h1>
             <div>
                 {
-                    data.map(data=><p key={data._id}>{data.name} : {data.email}</p>)
+                    data.map(data=><p key={data._id}>{data.name} : {data.email} <button onClick={handlremove}>X</button>  </p>)
                 }
             </div>
         </div>
